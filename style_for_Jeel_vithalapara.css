@@ -182,7 +182,8 @@ a{
 h2{
   margin: 1.2rem;
   text-align: justify;
-  font-family:myFirstFont2 ;
+  /* font-family:myFirstFont2 ; */
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.77em; 
   vertical-align: sub;
   /* font-size: 7.50em;  */
@@ -191,7 +192,8 @@ h2{
 h6{
   margin: 1.2rem;
   text-align: left;
-  font-family:myFirstFont2 ;
+  /* font-family:myFirstFont2 ; */
+  font-family: 'Times New Roman', Times, serif;
   /* font-family:url(RubikDirt-Regular.ttf) ; */
   /* font-size: 2.86em;  */
   font-size: 7.50em;
