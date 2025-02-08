@@ -1,0 +1,544 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+body,*{
+  /* cursor: url('sun-rays.png'),auto; */
+  
+}
+
+
+
+  .pmainphoto, .GivenText {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+a{
+  z-index: 99;
+}
+  a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: transparent;
+    
+  }
+  
+  a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: transparent;
+    
+  }
+  
+  a:hover {
+    color: rgb(253, 255, 117);
+    text-decoration: none;
+    background-color: transparent;
+    
+  }
+  
+  a:active {
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #0077ff; 
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fffddb; 
+  }
+  
+  .mainphoto{
+    cursor: url('sun-rays.png'),auto;
+    will-change: transform;
+    font-family: 'myFirstFont'; 
+    font-size: 90px;
+    width: 100%;
+    height:575px;
+    position: relative;
+    vertical-align: 500px;
+    background-image: linear-gradient(180deg,#50a2ee 10%, #fffddb 10%,#50a2ee 20%, #fffddb 20%,#50a2ee 30%, #fffddb 30%,#50a2ee 40%, #fffddb 40%,
+    #50a2ee 50%, #fffddb 50%,#50a2ee 60%,#fffddb 60%,#50a2ee 70%, #fffddb 70%,#50a2ee 80%, #fffddb 80%,#50a2ee 90%, #fffddb 90%,#50a2ee 100%,
+     #fffddb 80%); 
+    /* color: rgb(0, 0, 0); */
+    padding-top: 200px;
+    padding-left: 125px;
+    will-change: transform;
+    overflow: hidden;
+    object-fit: cover;
+    transition: all 0.55s ease-in;
+  }
+
+  .imageslogo {
+  
+      
+      .mfp-with-anim {
+        opacity: 0;
+        transition: all 0.2s ease-in-out; 
+        transform: scale(0.8); 
+      }
+      .mfp-with-anim {
+        transform: scale(0.8); 
+        opacity: 0;
+      }
+  }
+  
+  .backdiv{
+    cursor: context-menu;
+    /* background-color: #111111;  */
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(0,164,255,1) 0%, rgba(9,9,121,1) 40%, rgb(4, 0, 77) 70%, rgb(0, 0, 0) 100%);
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height:100%;
+    text-align: center;
+   
+  }
+  
+  .gallery-track {
+    overflow: hidden;
+    animation:myfirstani 3s 4;
+    animation-timing-function: ease-in;
+    animation-direction: alternate-reverse;
+    position: fixed;
+    display: grid;
+    /* below is to change the number of small cards at one rows, for second argument 1fr 
+    grid-template-columns: repeat(1, 2fr);  */
+    /* grid-template-columns: 1fr; */
+    gap: 0.20rem; 
+    padding: 0.20rem;
+    will-change: transform;
+  }
+
+
+
+  .card,.cardwithtext {
+    /* below is old 450px and changed to other  */
+    height: 80vmax;
+    /* extra added for the width  */
+    width: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 0;
+    transition: all 0.2s;
+    & .card-image-wrapper {
+      height: 150%;
+      will-change: transform;
+      
+      & img {
+        animation-timeline: scroll();
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  } 
+
+
+  .cardwithtext{
+    text-align: center;
+    z-index: -1;
+    position: relative;
+    font-size:20px;
+    font-family:myFirstFont2;
+    overflow: hidden;
+    
+  } 
+
+
+  h1 {
+    /* font-family: myFirstFont2; */
+    display: inline-block;
+    margin: 0;
+    background-image: url('background-imaige-for-text-for-website-of-jeel-vithalapara.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* this given h2 is used for the text in the tile not used as title  */
+h2{
+  margin: 1.2rem;
+  text-align: justify;
+  font-family:myFirstFont2 ;
+  font-size: 1.77em; 
+  vertical-align: sub;
+  /* font-size: 7.50em;  */
+}
+
+h6{
+  margin: 1.2rem;
+  text-align: left;
+  font-family:myFirstFont2 ;
+  /* font-family:url(RubikDirt-Regular.ttf) ; */
+  /* font-size: 2.86em;  */
+  font-size: 7.50em;
+  vertical-align: sub;
+}
+
+/*  create diffrent name and use if neede for the tile text donot change any above code of h1 will change the main name Jeel VIthalapara Text with other text as well 
+
+h1 {
+  font-family: myFirstFont2;
+  display: inline-block;
+  margin: 10rem;
+  background-image: url('7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+} */
+  .GivenText{
+    
+    display: inline-block;
+    margin: 0;
+    background-image: url('24.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: initial;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+
+  }
+
+
+  .cardcerti {
+    cursor: context-menu;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    & .card-image-wrapper {
+      height: 100%;
+      will-change: transform;
+      transition: all 0.5s ease-in-out;
+      
+      & img {
+        filter: blur(0px);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+
+
+
+  .cardcerti:hover {
+    cursor: context-menu;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    
+
+    & .card-image-wrapper {
+      height: 100%;
+      will-change: transform;
+      transition: all 0.2s ease-in-out;
+      
+      }
+      & img {
+        filter: blur(0px);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: all 0.2s ease-in-out;
+      }
+      }
+
+.card:hover,.cardwithtext:hover{
+  transform: scale(0.97);
+  box-shadow: 0px 0px 1px 5px rgb(255, 240, 25);
+}
+       
+.conntect-logos
+{
+  user-select: none;
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+  width: fit-content;
+  margin-top: 3%;
+  margin-left: 20%;
+  height: fit-content;
+  display: inline-block;
+  /* transition: background-color 2s ease-out 100ms; */
+  transition: all 0.2s ease-in-out;
+}
+
+.conntect-logos:hover
+{
+  cursor: url('sun-rays.png'),auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none; 
+  filter: drop-shadow(3px 2px #7c7c7c );
+  height: 25px;
+  width:  25px;
+  display: inline-block;
+}
+
+.glass_behind_name{
+  background-image: linear-gradient(#b8b8b800 44% , #0a78f5b2 2%,#b8b8b800 44%);  
+  border:medium;
+  border-radius: 7px;
+  position: -ms-page; 
+  width: 92%;
+  transition: 3s;
+  cursor: url('sun-rays.png'),auto;
+  /* backdrop-filter: blur(33px); */
+}
+.glass_behind_name2{
+
+  /* height: inherit;
+  width: inherit;
+  border:medium;
+  position: -ms-page; */
+ 
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: 3s;
+}   
+/* .glass_behind_name2:hover{
+  animation: alternate-reverse;
+  background-color: rgba(255, 255, 255, 0.171); 
+   /* height: inherit; */
+  /* width: inherit; */
+  /* border:medium; */
+  /* border-radius: 1px; */
+  /* position: -ms-page; * 
+  backdrop-filter: blur(2px);
+}     */
+
+.images{
+  padding-left: 20%; 
+}
+
+.typing-demo {
+  width: 32ch;
+  cursor: url('sun-rays.png'),auto;
+  animation: typing 4s steps(32), blink 0.5s step-end infinite backwards;
+  white-space: nowrap;
+  overflow: hidden;
+  animation-iteration-count:infinite;
+}
+
+
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+
+
+
+@font-face {
+    font-family:'myFirstFont';
+    src: url(ostrich-sans-bold.ttf);
+  }
+
+@font-face {
+  font-family:'myFirstFont2';
+  src: url(ostrich-sans.ttf);
+}
+/* @font-face {
+  font-family:'myFirstFont2';
+  src: url(ostrich-sans.ttf);
+} */
+ /* @keyframes myfirstani {
+  0%  {left: 0px; top: 91%;}
+  100%{left: 0px; top: 95%;}
+} */
+
+
+@media (width < 800px) {
+  h6{font-size: 4.5rem;}
+ .gallery-track {
+   grid-template-columns: repeat(1,1fr);
+ }
+ .backdiv{
+   background-color: #111111;
+}
+.mainphoto{
+ font-size: 35px;
+ padding-left: 15px;
+}
+.cardcerti {
+ cursor: context-menu;
+ height: fit-content;
+ overflow: hidden;
+ border-radius: 10px;
+ & .card-image-wrapper {
+   height: 150%;
+   will-change: transform;
+   
+   
+   & img {
+     
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+   
+   }
+ }
+}
+
+
+
+.cardcerti:hover {
+ cursor: context-menu;
+ height: 100%;
+ width: 100%;
+ overflow: visible;
+ border-radius: 10px;
+ 
+
+ & .card-image-wrapper {
+   height: 100%;
+   will-change: transform;
+
+   }
+   & img {
+     filter: blur(0px);
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+   
+   }
+   }
+}
+
+@media (width < 550px) {
+
+  h6{font-size: 3rem;}
+  .gallery-track {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .backdiv{
+    background-color:#111111;
+  }
+  .mainphoto{
+    font-size: 35px;
+    padding-left: 35px;
+  }
+  .cardcerti {
+    cursor: context-menu;
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 10px;
+    & .card-image-wrapper {
+      height: 150%;
+      will-change: transform;
+      
+      
+      & img {
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+      }
+    }
+  }
+
+  
+
+  .cardcerti:hover {
+    cursor: context-menu;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    border-radius: 10px;
+    
+    
+    & .card-image-wrapper {
+      height: 100%;
+      will-change: transform;
+      
+    }
+      & img {
+        filter: blur(0px);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        
+      }
+    }
+    .mainphoto{
+    
+      will-change: transform;
+      font-family: 'myFirstFont'; 
+      font-size: 180%;
+
+    }
+    .typing-demo {
+      width: 32ch;
+      animation: typing 4s steps(32), blink 0.5s step-end infinite backwards;
+      white-space: nowrap;
+      overflow: hidden;
+      animation-iteration-count:infinite;
+    }
+/* 
+    @keyframes myfirstani {
+      0%  {left: 0px; top: 58%;}
+      100%{left: 0px; top: 64%;}
+    } */
+
+    .cardcerti:hover {
+      cursor: context-menu;
+      height: 100%;
+      width: 100%;
+      overflow: visible;
+      border-radius: 10px;
+      
+  
+      & .card-image-wrapper {
+        height: 100%;
+        will-change: transform;
+      
+        }
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+
+        }
+        }
+      
+}
