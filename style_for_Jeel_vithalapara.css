@@ -448,6 +448,28 @@ h1 {
 
 @media (width < 550px) {
 
+  .card,.cardwithtext {
+    /* below is old 450px and changed to other  */
+    height: 80vmax;
+    /* extra added for the width  */
+    width: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 0;
+    transition: all 0.2s;
+    & .card-image-wrapper {
+      height: 120%;
+      will-change: transform;
+      
+      & img {
+        animation-timeline: scroll();
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  } 
+
   h6{font-size: 3rem;}
   .gallery-track {
     grid-template-columns: repeat(1,1fr);
@@ -457,7 +479,8 @@ h1 {
   }
   .mainphoto{
     font-size: 35px;
-    padding-left: 35px;
+    padding-left: 10px;
+    height: 50rem;
   }
   .cardcerti {
     cursor: context-menu;
