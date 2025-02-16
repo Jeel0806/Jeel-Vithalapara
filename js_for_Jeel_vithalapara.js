@@ -12,6 +12,15 @@ let raf;
 
 const lerp = (start,end,t) => start * (1-t) + end * t;
 
+window.onload = checkScreenSize;
+function checkScreenSize() {
+  if (window.innerWidth < 800) {
+      alert("Devloper is lazy to optimize website for small devices :( ''I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.'' ~Bill Gates ");
+  }
+}
+
+
+
 function updateScroll() {
   startY = lerp(startY,endY,easing);
   gallery.style.height = `${track.clientHeight}px`;
