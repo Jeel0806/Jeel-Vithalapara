@@ -107,7 +107,7 @@ a{
     cursor: context-menu;
     /* background-color: #111111;  */
     background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(0,164,255,1) 0%, rgb(12, 12, 136) 40%, rgb(4, 0, 77) 80%, rgb(1, 8, 46) 100%);
+    background: linear-gradient(180deg, rgba(0,164,255,1) 0%, rgb(21, 21, 173) 40%, rgb(6, 0, 129) 80%, rgb(1, 8, 46) 100%);
     position: relative;
     text-align: center;
     width: 100%;
