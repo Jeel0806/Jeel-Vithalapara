@@ -12,11 +12,11 @@ let raf;
 
 const lerp = (start,end,t) => start * (1-t) + end * t;
 window.onload = function () {
-      // Check if the redirect already happened
+
       if (!localStorage.getItem('redirectedOnce')) {
-        // Set the flag so it only happens once
+
         localStorage.setItem('redirectedOnce', 'true');
-        // Redirect to loading page
+
         window.location.href = "loading_page.html";
       }setTimeout(() => {
         localStorage.removeItem('redirectedOnce');
@@ -25,7 +25,7 @@ window.onload = function () {
     };
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Create a black overlay div that covers the screen
+
   const fadeOverlay = document.createElement('div');
   Object.assign(fadeOverlay.style, {
     position: 'fixed',
@@ -42,14 +42,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.body.appendChild(fadeOverlay);
 
-  // Start fading out the overlay
   requestAnimationFrame(() => {
     fadeOverlay.style.opacity = '0';
   });
 
-  // Remove the overlay after transition
+
   fadeOverlay.addEventListener('transitionend', () => {
+      document.body.style.overflow = 'hidden';
     fadeOverlay.remove();
+    document.body.style.overflow = 'auto'; 
   });
 });
 
