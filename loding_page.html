@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeel Vithalapara</title>
+</head>
+<body>
+<div class="daddy_div">
+    <div class="splash_screen" >
+        <img class="img_for_splalsh" src="output-onlinepngtools.png" alt="J" height="" width="9%" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" >
+    </div> 
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+
+    .img_for_splalsh{
+
+        background:linear-gradient(45deg , #6459f8,  #9c32e2,  #f36896, #ff0b0b, #ff5500,  #ff9500,  #ffb700);
+        animation: rot55 1s infinite alternate-reverse;
+
+        border: none;
+        overflow: hidden;
+        transition-timing-function: ease;
+        animation: slide-out-bck-center 0.5s  both;
+        animation-delay: 2.5s;
+    
+    }
+    .splash_screen{
+      border: none;
+      transition-duration: 1s;
+      transition-timing-function: ease;
+
+      /*  */
+       
+    }
+    .daddy_div{
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    } 
+
+
+@keyframes rot55 {
+  to {
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-color: rgba(255, 0, 0, 0.24);
+    backdrop-filter: blur(1px);
+    
+  }
+}
+
+@keyframes slide-out-bck-center {
+  0% {
+    /* transform: translateZ(0); */
+    opacity: 1;
+  }
+  100% {
+    /* transform: translateZ(-1100px); */
+    opacity: 0;
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script>
+    // Function to preload the next HTML file
+    // function preloadNextPage() {
+    //     const link = document.createElement('link');
+    //     link.rel = 'prefetch';
+    //     link.href = 'index.html'; // Path to the next HTML file
+    //     document.head.appendChild(link);
+    // }
+
+    // Call the function to start preloading
+    // window.onload = function () {
+    //     preloadNextPage();
+    // };
+
+     function preloadAndRedirect(preloadUrl, delay = 4000) {
+      // Preload the file by fetching and storing in cache
+      fetch(preloadUrl, { cache: "force-cache" })
+        .then(() => {
+          // After 4 seconds, redirect
+          setTimeout(() => {
+            window.location.href = preloadUrl;
+          }, delay);
+        })
+        .catch(error => {
+          console.error("Failed to preload:", error);
+          // Still redirect after delay, even if preload fails
+          setTimeout(() => {
+            window.location.href = preloadUrl;
+          }, delay);
+        });
+    }
+
+    // Call when the page loads
+    window.onload = function() {
+      preloadAndRedirect("index.html", 4000);
+      // fetch("html_home.html", { cache: "force-cache" })
+
+    };
+</script> 
+</html>
