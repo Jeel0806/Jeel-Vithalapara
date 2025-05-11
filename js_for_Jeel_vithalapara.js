@@ -18,7 +18,10 @@ window.onload = function () {
         localStorage.setItem('redirectedOnce', 'true');
         // Redirect to loading page
         window.location.href = "loading_page.html";
-      }
+      }setTimeout(() => {
+        localStorage.removeItem('redirectedOnce');
+        console.log("Redirect flag reset.");
+      }, 20000);
     };
 
 window.addEventListener('DOMContentLoaded', () => {
