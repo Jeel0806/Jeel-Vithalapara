@@ -25,7 +25,7 @@ window.onload = function () {
     };
 
 window.addEventListener('DOMContentLoaded', () => {
-
+      document.body.style.overflow = 'hidden';
   const fadeOverlay = document.createElement('div');
   Object.assign(fadeOverlay.style, {
     position: 'fixed',
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   fadeOverlay.addEventListener('transitionend', () => {
-      document.body.style.overflow = 'hidden';
+
     fadeOverlay.remove();
     document.body.style.overflow = 'auto'; 
   });
