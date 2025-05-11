@@ -11,6 +11,44 @@ let endY = 0;
 let raf;
 
 const lerp = (start,end,t) => start * (1-t) + end * t;
+window.onload = function () {
+      // Check if the redirect already happened
+      if (!localStorage.getItem('redirectedOnce')) {
+        // Set the flag so it only happens once
+        localStorage.setItem('redirectedOnce', 'true');
+        // Redirect to loading page
+        window.location.href = "loading_page.html";
+      }
+    };
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Create a black overlay div that covers the screen
+  const fadeOverlay = document.createElement('div');
+  Object.assign(fadeOverlay.style, {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    backgroundColor: 'black',
+    opacity: 1,
+    zIndex: 9999,
+    pointerEvents: 'none',
+    transition: 'opacity 2s ease-in'
+  });
+
+  document.body.appendChild(fadeOverlay);
+
+  // Start fading out the overlay
+  requestAnimationFrame(() => {
+    fadeOverlay.style.opacity = '0';
+  });
+
+  // Remove the overlay after transition
+  fadeOverlay.addEventListener('transitionend', () => {
+    fadeOverlay.remove();
+  });
+});
 
 window.onload = checkScreenSize;
 function checkScreenSize() {
